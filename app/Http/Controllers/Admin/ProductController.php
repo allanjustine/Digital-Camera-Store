@@ -80,7 +80,8 @@ class ProductController extends Controller
             'stock'                    =>          $request->stock,
             'price'                    =>          $request->price,
             'description'              =>          $request->description,
-            'category_id'              =>          $request->category_id
+            'category_id'              =>          $request->category_id,
+            'sold'                     =>          0,
         ]);
 
         $log_entry = Auth::user()->name . " added a new product: " . $product->product_name . " with the id# " . $product->id;

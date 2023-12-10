@@ -23,7 +23,7 @@ background: linear-gradient(90deg, rgba(217,216,227,1) 0%, rgba(95,95,102,1) 35%
                     <a href="/category/{{ $category->id }}" style="text-decoration: none;">
                         <div class="card">
                             <img src="{{ Storage::url($category->cat_image) }}" class="card-img-top"
-                                alt="{{ $category->name }}" style="width: 100%; height: 120px;">
+                                alt="{{ $category->name }}" style="width: 100%; height: 200px;">
                             <div class="card-body">
                                 <p class="card-title text-center">{{ $category->name }}</p>
                             </div>

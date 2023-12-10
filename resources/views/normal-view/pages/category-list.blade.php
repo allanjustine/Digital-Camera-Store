@@ -65,7 +65,7 @@
 
                             <div class="media-body">
                                 <h6 class="media-title font-weight-semibold">
-                                    <a href="#" data-abc="true">{{ $product->product_name }}</a>
+                                    <h4 class="text-primary-emphasis"><strong>{{ $product->product_name }}</strong></h4>
                                 </h6>
 
                                 <ul class="list-inline list-inline-dotted mb-3 mb-lg-2">
