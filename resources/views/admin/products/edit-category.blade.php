@@ -32,7 +32,7 @@
                                 <input type="text" id="name"
                                     class="form-control @error('name') is-invalid @enderror" name="name"
                                     value="{{ $category->name }}" autocomplete="name" autofocus />
-                                <label class="form-label" for="name">Location Name Category</label>
+                                <label class="form-label" for="name">Name Category</label>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -74,7 +74,7 @@
                     <thead>
                         <tr>
                             <th>ID.</th>
-                            <th>Location Category Name</th>
+                            <th>Category Name</th>
                             <th>Remarks</th>
                             <th>Action</th>
                         </tr>

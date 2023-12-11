@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @section('title')
-    | Location Category Create
+    | Category Create
 @endsection
 
 @section('content')
@@ -32,7 +32,7 @@
                                 <input type="text" id="name"
                                     class="form-control @error('name') is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" autocomplete="name" autofocus />
-                                <label class="form-label" for="name">Cat name</label>
+                                <label class="form-label" for="name">Category name</label>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
