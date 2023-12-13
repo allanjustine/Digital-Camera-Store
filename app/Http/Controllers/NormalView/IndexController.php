@@ -55,12 +55,19 @@ class IndexController extends Controller
                 return back()->with('error', 'No available products. Please select another one.');
             } else {
 
-                $order = Order::create([
-                    'product_id'       => $request->product_id,
-                    'order_quantity'   => $request->order_quantity,
-                    'status'           => "Pending",
-                    'user_id'          => auth()->id()
-                ]);
+                $orderQuantity = $request->order_quantity;
+
+                if ($product->stock < $orderQuantity) {
+                    return back()->with('error', 'You entered an excess amount.' . ' product stock ' . $product->stock);
+                } else {
+
+                    $order = Order::create([
+                        'product_id'       => $request->product_id,
+                        'order_quantity'   => $orderQuantity,
+                        'status'           => "Pending",
+                        'user_id'          => auth()->id()
+                    ]);
+                }
 
                 $product->decrement('stock', $order->order_quantity);
                 $product->increment('sold', $order->order_quantity);
